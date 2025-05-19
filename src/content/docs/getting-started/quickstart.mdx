@@ -1,0 +1,354 @@
+---
+title: Quick Start 
+description: A quick start guide for Vuejs documentation
+keywords: Vue, JavaScript, documentation
+
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+
+
+  ## Try Vue Online​
+  
+  - <div> To quickly get a taste of Vue, you can try it directly in our <a href="https://play.vuejs.org/#eNo9jcEKwjAMhl/lt5fpQYfXUQfefAMvvRQbddC1pUuHUPrudg4HIcmXjyRZXEM4zYlEJ+T0iEPgXjn6BB8Zhp46WUZWDjCa9f6w9kAkTtH9CRinV4fmRtZ63H20Ztesqiylphqy3R5UYBqD1UyVAPk+9zkvV1CKbCv9poMLiTEfR2/IXpSoXomqZLtti/IFwVtA9A==" style="text-decoration: none; color: green;">▶Playground </a>.</div>
+
+  - <div> If you prefer a plain HTML setup without any build steps, you can use this <a href="https://jsfiddle.net/yyx990803/2ke1ab0z/" style="text-decoration: none; color: green;"> JSFiddle </a> as your starting point.</div>
+
+  - <div> If you are already familiar with Node.js and the concept of build tools, you can also try a complete build setup right within your browser on <a href="https://stackblitz.com/edit/vitejs-vite-8txt3nhr?file=index.html&terminal=dev" style="text-decoration: none; color: green;"> StackBlitz</a>. </div>
+  
+
+  ## How to Create a Vue Application
+
+  There are two different ways to create a Vue application, which include:
+
+  1. <div><a href=""> Using a Build Set Up Based on Vite</a> </div>
+
+  2. <div> <a> Using Vue from CDN </a></div>
+
+
+  ### Using a Build Set Up 
+
+    :::note[Prerequisites]
+
+    - Familiarity with the command line
+    - <div> Install <a href="https://nodejs.org/en" style="text-decoration: none; color: green;"> Node.js </a>version 18.3 or higher</div>
+  :::
+
+ 
+ 
+  In this section we will introduce how to scaffold a Vue Single Page Application on your local machine. The created project will be using a build setup based on <a href="https://vite.dev/" style="text-decoration: none; color: green;">Vite </a> and allow us to use Vue Single-File Components (SFCs).
+
+  Make sure you have an up-to-date version of Node.js installed and your current working directory is the one where you intend to create a project. Run the following command in your command line:
+
+
+  <Tabs>
+      <TabItem label="npm">
+          ```
+             npm create vue@latest
+          ```
+        </TabItem>
+          
+      <TabItem label="pnpm">
+         ```
+         pnpm create vue@latest
+         ````
+        </TabItem>
+         
+      <TabItem label="yarn">
+          ``` 
+          // For Yarn (v1+)
+          yarn create vue
+
+          // For Yarn Modern (v2+)
+          yarn create vue@latest
+
+          // For Yarn ^v4.11
+          yarn dlx create-vue@latest
+          ```
+        </TabItem>
+      <TabItem label="burn">
+         ```
+            bun create vue@latest
+           ````    
+        </TabItem>
+  </Tabs>
+
+ 
+ 
+  <div> This command will install and execute <a href="https://github.com/vuejs/create-vue" class="addcolortext"> create-vue </a>, the official Vue project scaffolding tool. You will be presented with prompts for several optional features such as TypeScript and testing support: </div>
+
+  ```
+     ✔ Project name: … <your-project-name>
+     ✔ Add TypeScript? … No / Yes
+     ✔ Add JSX Support? … No / Yes
+     ✔ Add Vue Router for Single Page Application development? … No / Yes
+     ✔ Add Pinia for state management? … No / Yes
+     ✔ Add Vitest for Unit testing? … No / Yes
+     ✔ Add an End-to-End Testing Solution? … No / Cypress / Nightwatch / Playwright
+     ✔ Add ESLint for code quality? … No / Yes
+     ✔ Add Prettier for code formatting? … No / Yes
+     ✔ Add Vue DevTools 7 extension for debugging? (experimental) … No / Yes
+ 
+     Scaffolding project in ./<your-project-name>...
+     Done.
+
+  ```
+
+  If you are unsure about an option, simply choose `No` by hitting enter for now. Once the project is created, follow the instructions to install dependencies and start the dev server:
+
+
+    <Tabs>
+      <TabItem label="npm">
+          ```
+             cd <your-project-name>
+             npm install
+             npm run dev
+          ```
+      </TabItem>
+      <TabItem label="pnpm">
+          ```
+            cd <your-project-name>
+            pnpm install
+            pnpm run dev
+          ```
+      </TabItem>
+      <TabItem label="yarn">
+          ``` 
+            cd <your-project-name>
+            yarn
+            yarn dev
+          ```
+        </TabItem>
+      <TabItem label="burn">
+          ```
+             cd <your-project-name>
+             bun install
+            bun run dev      
+           ```
+        </TabItem>
+  </Tabs>
+
+  You should now have your first Vue project running!
+  
+  Note that the example components in the generated project are written using the Composition API and `<script setup>`, rather than the Options API.
+  
+   Here are some additional tips:
+
+  - <div> The recommended IDE setup is <a href="https://code.visualstudio.com/" class="addcolortext">Visual Studio Code</a> + <a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar" class="addcolortext"> Vue - Official extension</a>. If you use other editors, check out the IDE support section.</div>
+  - <div> More tooling details, including integration with backend frameworks, are discussed in the Tooling Guide. </div>
+  - <div> To learn more about the underlying build tool Vite, check out the <a href="https://vitejs.dev/" class="addcolortext">Vite docs </a>. </div>
+  - <div> If you choose to use TypeScript, check out the TypeScript Usage Guide. </div>
+
+
+When you are ready to ship your app to production, run the following:
+
+    <Tabs>
+      <TabItem label="npm">
+          ```
+             npm run build
+          ```
+      </TabItem>
+      <TabItem label="pnpm">
+          ```
+             pnpm run build
+          ```
+      </TabItem>
+      <TabItem label="yarn">
+          ``` 
+            yarn build
+          ```
+        </TabItem>
+      <TabItem label="burn">
+          ```
+            bun run build
+           ```
+        </TabItem>
+  </Tabs>
+
+This will create a production-ready build of your app in the project's ./dist directory. Check out the Production Deployment Guide to learn more about shipping your app to production.
+
+Next Steps > 
+
+  ### Using Vue from CDN​
+  
+  You can use Vue directly from a CDN via a script tag:
+
+  ``` html
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  ```
+  <div> Here we are using <a href="https://unpkg.com/" class="addcolortext">unpkg</a>, but you can also use any CDN that serves npm packages, for example <a href="https://www.jsdelivr.com/package/npm/vue" class="addcolortext"> jsdelivr </a> or <a href="https://cdnjs.com/libraries/vue" class="addcolortext"> cdnjs</a>. Of course, you can also download this file and serve it yourself.</div>
+
+  When using Vue from a CDN, there is no "build step" involved. This makes the setup a lot simpler, and is suitable for enhancing static HTML or integrating with a backend framework. However, you won't be able to use the Single-File Component (SFC) syntax.
+
+  #### Using the Global Build​
+  The above link loads the global build of Vue, where all top-level APIs are exposed as properties on the global Vue object. Here is a full example using the global build:
+
+  ``` html
+    <! --html-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">{{ message }}</div>
+
+    <script>
+    const { createApp, ref } = Vue
+
+    createApp({
+      setup() {
+      const message = ref('Hello vue!')
+      return {
+        message
+      }
+     }
+    }).mount('#app')
+   </script>
+  ```
+
+  <div> <a href="https://codepen.io/vuejs-examples/pen/eYQpQEG" class="addcolortext"> CodePen Demo > </a></div>
+
+  :::tip
+    Many of the examples for Composition API throughout the guide will be using the `<script setup>` syntax, which requires build tools. If you intend to use Composition API without a build step, consult the usage of the setup() option.
+  :::
+
+  #### Using the ES Module Build​
+  Throughout the rest of the documentation, we will be primarily using ES modules syntax. Most modern browsers now support ES modules natively, so we can use Vue from a CDN via native ES modules like this:
+
+  ``` html
+    <!-- html -->
+    <div id="app">{{ message }}</div>
+
+    <script type="module">
+      import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+     createApp({
+        setup() {
+           const message = ref('Hello Vue!')
+           return {
+            message
+          }
+        }
+     }).mount('#app')
+    </script>
+  ```
+
+  Notice that we are using `<script type="module">`, and the imported CDN URL is pointing to the ES modules build of Vue instead.
+
+  <div><a href="https://codepen.io/vuejs-examples/pen/MWzazEv" class="addcolortext"> CodePen Demo > </a></div>
+
+  #### Enabling Import maps​
+  In the above example, we are importing from the full CDN URL, but in the rest of the documentation you will see code like this:
+
+  ``` javascript
+    //js
+    import { createApp } from 'vue'
+  ```
+
+  <div> We can teach the browser where to locate the `vue` import by using <a href="https://caniuse.com/import-maps" class="addcolortext"> Import Maps</a>: </div>
+
+  ``` html
+    <!--html -->
+    <script type="importmap">
+    {
+      "imports": {
+         "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+         }
+     }
+    </script>
+
+    <div id="app">{{ message }}</div>
+
+    <script type="module">
+    import { createApp, ref } from 'vue'
+
+    createApp({
+      setup() {
+        const message = ref('Hello Vue!')
+        return {
+          message
+        }
+       }
+    }).mount('#app')
+   </script>
+  ```
+
+  <div> <a href="https://codepen.io/vuejs-examples/pen/YzRyRYM" class="addcolortext">CodePen Demo > </a></div>
+
+  You can also add entries for other dependencies to the import map - but make sure they point to the ES modules version of the library you intend to use.
+
+  :::tip[Import Maps Browser Support]
+    <div> Import Maps is a relatively new browser feature. Make sure to use a browser within its <a href="https://caniuse.com/import-maps" style="addcolortext"> support range</a>. In particular, it is only supported in Safari 16.4+. </div>
+
+  :::
+
+  :::caution[Notes on Production Use]
+    
+    
+    <div> The examples so far are using the development build of Vue - if you intend to use Vue from a CDN in production, make sure to check out the Production Deployment Guide.</div>
+
+    <div> While it is possible to use Vue without a build system, an alternative approach to consider is using <a href="https://github.com/vuejs/petite-vue"> `vuejs/petite-vue` </a>that could better suit the context where <a href="https://github.com/jquery/jquery"> `jquery/jquery`</a> (in the past) or <a href="alpine"> alpinejs/alpine </a> (in the present) might be used instead. </div>
+
+
+
+  :::
+
+  #### Splitting Up the Modules​
+  As we dive deeper into the guide, we may need to split our code into separate JavaScript files so that they are easier to manage.
+  
+  For example:
+
+  ``` html
+
+    <!-- index.html -->
+    <div id="app"></div>
+
+    <script type="module">
+      import { createApp } from 'vue'
+      import MyComponent from './my-component.js'
+
+      createApp(MyComponent).mount('#app')
+    </script>
+  ```
+
+  ``` javascript
+    // my-component.js
+    import { ref } from 'vue'
+    export default {
+    setup() {
+      const count = ref(0)
+      return { count }
+    },
+    template: `<div>Count is: {{ count }}</div>`
+  }
+
+  ```
+
+  <div> If you directly open the above `index.html` in your browser, you will find that it throws an error because ES modules cannot work over the `file://` protocol, which is the protocol the browser uses when you open a local file. </div>
+
+  <div> Due to security reasons, ES modules can only work over the `http://` protocol, which is what the browsers use when opening pages on the web. In order for ES modules to work on our local machine, we need to serve the `index.html` over the `http://` protocol, with a local HTTP server. </div>
+
+  <div> To start a local HTTP server, first make sure you have <a href="https://nodejs.org/en/" class="addcolortext"> Node.js</a> installed, then run npx serve from the command line in the same directory where your HTML file is. You can also use any other HTTP server that can serve static files with the correct MIME types. </div>
+
+  <div> You may have noticed that the imported component's template is inlined as a JavaScript string. If you are using VS Code, you can install the <a href="https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html" class="addcolortext"> es6-string-html</a> extension and prefix the strings with a /*html*/ comment to get syntax highlighting for them. </div>
+
+  ## Next Steps​
+  
+  If you skipped the Introduction, we strongly recommend reading it before moving on to the rest of the documentation.
+
+  <CardGrid>
+    <a href="https://vuejs.org/tutorial/" style="text-decoration: none; font-size: 20px;" >
+      <Card title="Continue With the Guide" icon="seti:smarty">
+        The guide walks you through every aspect of the framework in full detail.
+      </Card>
+    </a>
+
+    <a href="https://vuejs.org/tutorial/" style="text-decoration: none; font-size: 20px;" >
+      <Card title="Try the Tutorial" icon="open-book">
+        For those who prefer hands-on learning.
+      </Card>
+    </a>
+    <a href="https://vuejs.org/examples/#hello-world" style="text-decoration: none; font-size: 20px;">
+      <Card title="Check Out the Examples" icon="seti:argdown">
+        Explore examples of core features and common UI tasks.
+      </Card>
+    </a>
+  </CardGrid>
