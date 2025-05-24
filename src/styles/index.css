@@ -20,5 +20,6 @@ a{
 }
 /* Highest-specificity selector for the splash title */
 .astro-jbfsktt5 h1 {
-  color: #008080;
+color: hsl(180, 100%, 50%);
+
 }
