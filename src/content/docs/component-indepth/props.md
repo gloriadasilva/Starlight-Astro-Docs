@@ -4,7 +4,7 @@ description: Computed properties in Vue.
 keywords: Vue, JavaScript, documentation, Vue app
 ---
 
-  >This page assumes you've already read the <a> Components Basics</a>. Read that first if you are new to components.
+  >This page assumes you've already read the <a href="https://starlight-astro-docs.vercel.app/getting-started/component-basics/" class="addcolortext"> Components Basics</a>. Read that first if you are new to components.
   
   
   ## Props Declaration​

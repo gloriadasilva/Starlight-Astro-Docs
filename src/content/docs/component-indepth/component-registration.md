@@ -5,9 +5,9 @@ keywords: Vue, JavaScript, documentation
 ---
 
 
-  >This page assumes you've already read the <a> Components Basics</a>. Read that first if you are new to components.
+  >This page assumes you've already read the <a href="https://starlight-astro-docs.vercel.app/getting-started/component-basics/" class="addcolortext"> Components Basics</a>. Read that first if you are new to components.
 
-  > <a href="https://vueschool.io/lessons/vue-3-global-vs-local-vue-components?friend=vuejs"> ▶ Watch a free video lesson on Vue School </a>
+  > <a href="https://vueschool.io/lessons/vue-3-global-vs-local-vue-components?friend=vuejs" class="addcolortext"> ▶ Watch a free video lesson on Vue School </a>
   
 
   A Vue component needs to be "registered" so that Vue knows where to locate its implementation when it is encountered in a template. There are two ways to register components: **Global** and **Local**.

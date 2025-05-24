@@ -5,7 +5,7 @@ keywords: Vue, JavaScript, documentation, Vue app
 ---
 
 
-  > This page assumes you've already read the Components Basics. Read that first if you are new to components.
+  > This page assumes you've already read the <a href="https://starlight-astro-docs.vercel.app/getting-started/component-basics/" class="addcolortext"> Components Basics</a>. Read that first if you are new to components.
 
   ## Emitting and Listening to Events​
 
