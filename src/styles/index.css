@@ -8,3 +8,17 @@ a{
 .addcolortext{
     color: green;
 }
+
+.float{
+    background-color: green;
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 1.5rem;
+}
+/* Highest-specificity selector for the splash title */
+.astro-jbfsktt5 h1 {
+  color: #008080;
+}

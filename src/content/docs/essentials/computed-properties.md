@@ -33,7 +33,14 @@ keywords: Vue, JavaScript, documentation, Vue app
 
   At this point, the template is getting a bit cluttered. We have to look at it for a second before realizing that it performs a calculation depending on `author.books`. More importantly, we probably don't want to repeat ourselves if we need to include this calculation in the template more than once.
 
-  That's why for complex logic that includes reactive data, it is recommended to use a **computed property**. Here's the same example, refactored:
+  That's why for complex logic that includes reactive data, it is recommended to use a **computed property**. 
+  
+  ## Computed Properties
+
+  Computed properties are like data properties but they depend on other properties. They are updated automatically when a dependency changes
+
+  
+  Here's the same example, refactored:
 
   ``` javascript
 
@@ -65,7 +72,8 @@ keywords: Vue, JavaScript, documentation, Vue app
   <div><a href="https://play.vuejs.org/#eNp1kE9Lw0AQxb/KI5dtoTainkoaaREUoZ5EEONhm0ybYLO77J9CCfnuzta0vdjbzr6Zeb95XbIwZroPlMySzJW2MR6OfDB5oZrWaOvRwZIsfbOnCUrdmuCpQo+N1S0ET4pCFarUynnI4GttMT9PjLpCAUq2NIN41bXCkyYxiZ9rrX/cDF/xDYiPQLjDDRbVXqqSHZ5DUw2tg3zP8lK6pvxHe2DtvSasDs6TPTAT8F2ofhzh0hTygm5pc+I1Yb1rXE3VMsKsyDm5JcY/9Y5GY8xzHI+wnIpVw4nTI/10R2rra+S4xSPEJzkBvvNNs310ztK/RDlLLjy1Zic9cQVkJn+R7gIwxJGlMXiWnZEq77orhH3Pq2NH9DjvTfpfSBSbmA==" style="addcolortext"> ▶Try it in the Playground</a></div>
 
 
-  Here we have declared a computed property `publishedBooksMessage`. The `computed()` function expects to be passed a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description" class="addcolortext"> getter function</a>, and the returned value is a **computed ref**.
+  Here we have declared a computed property `publishedBooksMessage`. A  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description" class="addcolortext">getter function</a> is expected to be passed to the `computed()` function and the returned value is a **computed ref**.
+
   
  Similar to normal refs, you can access the computed result as `publishedBooksMessage.value`. Computed refs are also auto-unwrapped in templates so you can reference them without `.value` in template expressions.
 
@@ -76,7 +84,7 @@ keywords: Vue, JavaScript, documentation, Vue app
 
   ## Computed Caching vs. Methods​
 
-  You may have noticed we can achieve the same result by invoking a method in the expression:
+  It is possible to achieve the same result by invoking a method in the expression:
 
   ``` html
     //template
@@ -91,10 +99,11 @@ keywords: Vue, JavaScript, documentation, Vue app
     }
   ```
 
-  Instead of a computed property, we can define the same function as a method. For the end result, the two approaches are indeed exactly the same. However, the difference is that **computed properties are cached based on their reactive dependencies**. 
+  The only difference between these methods is that **Computed properties** are cached based on their reactive dependencies. I.e., A computed property will only re-evaluate when some of its reactive dependencies have changed.
+  
+  In contrast, a **Method** invocation will always run the function whenever a re-render happens.
 
-
-  A computed property will only re-evaluate when some of its reactive dependencies have changed. This means as long as `author.books` has not changed, multiple access to `publishedBooksMessage` will immediately return the previously computed result without having to run the getter function again.
+  In the example above, as long as `author.books` has not changed, multiple accesses to `publishedBooksMessage` will immediately return the previously computed result without having to run the getter function again.
 
   This also means the following computed property will never update, because `Date.now()` is not a reactive dependency:
 
