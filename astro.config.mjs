@@ -50,9 +50,19 @@ export default defineConfig({
             },
             {
               label: 'Component v-model', slug: 'component-indepth/component-model'
-            }
+            },
+            {
+              label: 'Fallthrough Attributes', slug: 'component-indepth/fallthrough-attributes'
+            },
           ]
 
+        },
+        {
+          label: 'Reusability',
+          items:[
+            {label: 'Composables', slug: 'reusability/composables'},
+            {label: 'Custom Directives', slug: 'reusability/custom-directives'},
+          ]
         },
       ],
     }),
