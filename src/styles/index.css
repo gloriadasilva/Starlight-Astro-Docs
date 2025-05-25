@@ -29,3 +29,10 @@ color: hsl(180, 100%, 50%);
     width: 9em;
     height: 3em;
 }
+
+/* Custom Directives */
+
+.importanttext{
+    background-color: yellow;
+    color: black;
+}

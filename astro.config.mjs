@@ -62,6 +62,7 @@ export default defineConfig({
           items:[
             {label: 'Composables', slug: 'reusability/composables'},
             {label: 'Custom Directives', slug: 'reusability/custom-directives'},
+            {label: 'Plugins', slug: 'reusability/plugins'},
           ]
         },
       ],
