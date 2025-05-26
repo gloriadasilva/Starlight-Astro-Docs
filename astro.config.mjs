@@ -65,6 +65,26 @@ export default defineConfig({
             {label: 'Plugins', slug: 'reusability/plugins'},
           ]
         },
+        {
+          label: 'Built-in Component',
+          items:[
+            {
+              label: 'Transition', slug: 'builtin-component/transition'
+            },
+            {
+              label: 'Transition Group', slug: 'builtin-component/transition-group'
+            },
+            {
+              label: 'KeepAlive', slug: 'builtin-component/keepalive'
+            },
+            {
+              label: 'Teleport', slug: 'builtin-component/teleport'
+            },
+            {
+              label: 'Suspense', slug: 'builtin-component/suspense'
+            }
+          ]
+        },
       ],
     }),
     vue(),
