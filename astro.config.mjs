@@ -85,6 +85,21 @@ export default defineConfig({
             }
           ]
         },
+        {
+          label: 'Scaling Up',
+          items:[
+            {
+              label: 'Single File Components', slug: 'scaling-up/single-file-component'
+            },
+            {
+              label: 'Tooling', slug: 'scaling-up/tooling'
+            },
+            {
+              label: 'Routing', slug: 'scaling-up/routing'
+            }
+          ]
+
+        },
       ],
     }),
     vue(),
