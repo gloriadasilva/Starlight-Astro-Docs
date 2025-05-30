@@ -96,6 +96,12 @@ export default defineConfig({
             },
             {
               label: 'Routing', slug: 'scaling-up/routing'
+            },
+            {
+              label:'State Management', slug: 'scaling-up/state-management'
+            },
+            {
+              label: 'Testing', slug: 'scaling-up/testing'
             }
           ]
 
