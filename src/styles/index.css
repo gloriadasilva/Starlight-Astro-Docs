@@ -48,8 +48,11 @@ a{
 }
 
 .astro-jbfsktt5 h1 {
-color: hsl(180, 100%, 50%);
-
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 .btn{
     border-radius: 0.3em;
@@ -63,5 +66,26 @@ color: hsl(180, 100%, 50%);
 .importanttext{
     background-color: yellow;
     color: black;
+}
+
+/* CARDS */
+
+.astro-v5tidmuc:nth-of-type(2){
+  background-color: rgba(1, 135, 0, 0.7);
+  backdrop-filter: blur(10px);           /* glass blur effect */
+  border: 1px solid rgba(0, 135, 0, 0.6); /* light green border */
+  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.7);
+
+}
+.astro-v5tidmuc:nth-of-type(3){
+  background-color: rgba(1, 135, 0, 0.7);
+  backdrop-filter: blur(10px);           /* glass blur effect */
+  border: 1px solid rgba(0, 135, 0, 0.6); /* light green border */
+  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.7);
+
+}
+
+.sl-link-buttonv:nth-of-type(1){
+	background-color: rgba(1, 135, 0, 0.7);
 }
 
