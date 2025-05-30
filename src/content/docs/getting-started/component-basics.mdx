@@ -6,6 +6,8 @@ keywords: Vue, JavaScript, documentation
 
 ---
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import InfoCard from '../../../components/cards.vue'
+
   
 
   ## What is a Vue Component?
@@ -15,7 +17,20 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   Vue Components lets you decompose your web page into smaller pieces that are reusable and easy to work with. Your web page can contain many Vue components.
 
   Here is a simple example of Vue component below:
+  
+  ``` javascript
+   <template>
+      <div class="card">
+      <h3>Card Component</h3>
+      <p>Hi, I am a Vue component and can be reused multiple times!</p>
+      </div>
+    </template>
 
+  ```
+
+  <InfoCard />
+
+  You can resue this simple card component multiple times.
   More information about Vue components is covered in the <a href="https://vuejs.org/guide/essentials/component-basics.html" class="addcolortext"> Component Basics section</a>
 
 
