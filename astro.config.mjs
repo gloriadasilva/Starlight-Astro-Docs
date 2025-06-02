@@ -106,6 +106,21 @@ export default defineConfig({
           ]
 
         },
+        {
+          label: 'Best Ptactices',
+          items: [
+            {
+              label: 'Production Deployment', slug: 'best-practices/production-deployment'
+            },
+            {
+              label: 'Performance', slug: 'best-practices/performance'
+            },
+            {
+              label: 'Accessiblity', slug: 'best-practices/accessibility'
+            }
+          ]
+
+        },
       ],
     }),
     vue(),
