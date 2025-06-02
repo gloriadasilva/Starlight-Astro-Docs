@@ -107,7 +107,7 @@ export default defineConfig({
 
         },
         {
-          label: 'Best Ptactices',
+          label: 'Best Practices',
           items: [
             {
               label: 'Production Deployment', slug: 'best-practices/production-deployment'
