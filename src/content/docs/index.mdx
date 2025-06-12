@@ -1,35 +1,59 @@
 ---
-title:  Welcome to Vue JS Documentation
-
-description: Learn how to build dynamic web interfaces with Vue js.
+title: Vue.js Documentation
+description: The Progressive JavaScript Framework for building user interfaces
 template: splash
+editUrl: false
+lastUpdated: false
+prev: false
+next: false
 hero:
-  tagline: An approachable, performant and versatile framework for building web user interfaces.
+  tagline: |
+    An approachable, performant and versatile framework for building web user interfaces.
   actions:
-    - text: Read Guide
+    - text: Get Started
       link: /getting-started/introduction/
       icon: right-arrow
-    - text: View on Github
+      variant: primary
+    - text: View on GitHub
       link: https://github.com/gloriadasilva/Starlight-Astro-Docs.git
       icon: external
       variant: minimal
 ---
+import VueFeatures from '../../components/VueFeatures.astro';
+import CommunityStats from '../../components/CommunityStats.astro';
+import CodeExample from '../../components/CodeExample.astro';
+import EcosystemGrid from '../../components/EcosystemGrid.astro';
+import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Explore the Docs
-
-<CardGrid >
-	<Card title="Get Started" icon="rocket" class="cards">
-		[Learn how to start building web interfaces with Vue](https://starlight-astro-docs.vercel.app/getting-started/quickstart/)
-	</Card>
-	<Card title="Install Vue" icon="download">
-		[Learn how to install Vue.js](https://vuejs.org/guide/quick-start.html)
-	</Card>
-	<Card title="Why Vue?" icon="puzzle">
-		[Check out why Vue is for you and what you can build with it](https://vueschool.io/articles/vuejs-tutorials/why-vue-js-is-a-great-starting-point-for-new-coders/)
-	</Card>
-	<Card title="Ways to Use Vue" icon="open-book">
-		[Learn the different ways you can use Vue to build web applications](https://vuejs.org/guide/extras/ways-of-using-vue.html)
-	</Card>
+<h2 class="explore"> Explore the Docs</h2>
+<CardGrid>
+  <Card title="📖 Learn the Basics" icon="document" class="cards">
+    New to Vue? Start with our step-by-step guide covering all the essentials.
+    
+    [Introduction →](https://starlight-astro-docs.vercel.app/getting-started/introduction/)
+  </Card>
+  
+  <Card title="⚡ Quick Setup" icon="rocket">
+    Get a Vue project up and running in seconds with our scaffolding tools.
+    
+    [Installation →](https://starlight-astro-docs.vercel.app/getting-started/quickstart/)
+  </Card>
+  
+  <Card title="🎯 Interactive Tutorial" icon="puzzle">
+    Learn Vue concepts hands-on with our interactive tutorial in the browser.
+    
+    [Try Tutorial →](https://vuejs.org/tutorial/)
+  </Card>
+  
+  <Card title="🎬 Video Courses" icon="star">
+    Prefer learning by watching? Check out our recommended video courses.
+    
+    [Watch Videos →](https://www.vuemastery.com/courses/)
+  </Card>
 </CardGrid>
+
+
+<VueFeatures />
+<CommunityStats />
+<EcosystemGrid />

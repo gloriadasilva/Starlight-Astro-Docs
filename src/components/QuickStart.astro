@@ -1,0 +1,32 @@
+---
+// src/components/QuickStart.astro
+import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
+---
+
+<section class="quick-start-section">
+  <div class="container">
+    <h2>Quick Start</h2>
+    <div class="quick-start-grid">
+      <div class="quick-start-option">
+        <h3>🎮 Try Vue Online</h3>
+        <p>For a quick taste of Vue.js, you can try it directly in our online playground.</p>
+        <a href="https://play.vuejs.org" class="btn-outline">Vue Playground</a>
+      </div>
+      
+      <div class="quick-start-option">
+        <h3>📦 Create a Vue Application</h3>
+        <p>Start a new Vue project with our CLI tool.</p>
+        <Code code={`npm create vue@latest my-vue-app
+cd my-vue-app
+npm install
+npm run dev`} lang="bash" />
+      </div>
+      
+      <div class="quick-start-option">
+        <h3>🔗 Use from CDN</h3>
+        <p>Include Vue directly in your HTML page.</p>
+        <Code code={`<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>`} lang="html" />
+      </div>
+    </div>
+  </div>
+</section>

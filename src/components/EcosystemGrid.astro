@@ -1,0 +1,68 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+---
+
+<section class="ecosystem-section">
+  <div class="container">
+    <h2 class="explore">Official Libraries</h2>
+    <CardGrid>
+      <Card title="Vue Router" icon="right-arrow">
+        <p>The official router for Vue.js</p>
+        <p><strong>Single-page App Routing</strong></p>
+        <a href="https://router.vuejs.org/" class="card-link">Learn More →</a>
+      </Card>
+      
+      <Card title="Pinia" icon="star">
+        <p>The Vue Store that you will enjoy using</p>
+        <p><strong>State Management</strong></p>
+        <a href="https://pinia.vuejs.org/" class="card-link">Learn More →</a>
+      </Card>
+      
+      <Card title="Vue CLI" icon="seti:config">
+        <p>Standard Tooling for Vue.js Development</p>
+        <p><strong>Project Scaffolding</strong></p>
+        <a href="https://vuejs.org/guide/scaling-up/tooling.html" class="card-link">Visit Site →</a>
+      </Card>
+      
+      <Card title="Vite" icon="seti:javascript">
+        <p>Next Generation Frontend Tooling</p>
+        <p><strong>Build Tool</strong></p>
+        <a href="https://vite.dev/" class="card-link">Visit Site →</a>
+      </Card>
+    </CardGrid>
+
+  </div>
+</section>
+
+<style>
+.ecosystem-section {
+  margin: 4rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 4rem 0;
+  border-radius: 1rem;
+}
+
+.ecosystem-section h2 {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.ecosystem-section h2:first-child {
+  margin-top: 0;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #42b883;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #369870;
+}
+</style>

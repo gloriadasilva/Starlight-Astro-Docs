@@ -1,0 +1,181 @@
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+---
+
+<section class="code-example-section">
+  <div class="container">
+    <h2>Experience Vue in Action</h2>
+    <div class="example-container">
+      <div class="example-description">
+        <h3>Declarative Rendering</h3>
+        <p>Vue.js uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying component instance's data.</p>
+      </div>
+      
+      <Tabs>
+        <TabItem label="Composition API">
+          ```vue
+          <template>
+            <div id="app">
+              <h1>You just clicked a button</h1>
+              <p>Count: {{ count }}</p>
+              <button @click="increment">
+                Click me!
+              </button>
+              <input v-model="message" placeholder="Edit me">
+            </div>
+          </template>
+
+          <script setup>
+          import { ref } from 'vue'
+
+          const message = ref('Hello Vue!')
+          const count = ref(0)
+
+          function increment() {
+            count.value++
+          }
+          </script>
+
+          <style scoped>
+          h1 {
+            color: #42b883;
+          }
+          button {
+            background: #42b883;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          </style>
+          ```
+        </TabItem>
+        
+        <TabItem label="Options API">
+          ```vue
+          <template>
+            <div id="app">
+              <h1>{{ message }}</h1>
+              <p>Count: {{ count }}</p>
+              <button @click="increment">
+                Click me!
+              </button>
+              <input v-model="message" placeholder="Edit me">
+            </div>
+          </template>
+
+          <script>
+          export default {
+            data() {
+              return {
+                message: 'Hello Vue!',
+                count: 0
+              }
+            },
+            methods: {
+              increment() {
+                this.count++
+              }
+            }
+          }
+          </script>
+
+          <style scoped>
+          h1 {
+            color: #42b883;
+          }
+          button {
+            background: #42b883;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          </style>
+          ```
+        </TabItem>
+        
+        <TabItem label="CDN">
+          ```html
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <script src="https://unpkg.com/vue@next"></script>
+          </head>
+          <body>
+            <div id="app">
+              <h1>{{ message }}</h1>
+              <p>Count: {{ count }}</p>
+              <button @click="increment">Click me!</button>
+              <input v-model="message" placeholder="Edit me">
+            </div>
+
+            <script>
+              const { createApp, ref } = Vue
+              
+              createApp({
+                setup() {
+                  const message = ref('Hello Vue!')
+                  const count = ref(0)
+                  
+                  function increment() {
+                    count.value++
+                  }
+                  
+                  return {
+                    message,
+                    count,
+                    increment
+                  }
+                }
+              }).mount('#app')
+            </script>
+          </body>
+          </html>
+          ```
+        </TabItem>
+      </Tabs>
+    </div>
+  </div>
+</section>
+
+<style>
+.code-example-section {
+  margin: 4rem 0;
+  background: #f8f9fa;
+  padding: 4rem 0;
+  border-radius: 1rem;
+}
+
+.code-example-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.example-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.example-description {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.example-description h3 {
+  font-size: 1.5rem;
+  color: #42b883;
+  margin-bottom: 1rem;
+}
+
+.example-description p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+</style>

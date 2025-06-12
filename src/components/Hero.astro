@@ -1,0 +1,45 @@
+---
+// src/components/Hero.astro
+import { Code } from '@astrojs/starlight/components';
+---
+
+<section class="hero-custom">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg width="120" height="120" viewBox="0 0 128 128">
+          <path fill="#4fc08d" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"/>
+          <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6l38.4,66.2L102.4,10C102.4,10,78.8,10,78.8,10z"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">
+        The Progressive
+        <span class="gradient-text">JavaScript Framework</span>
+      </h1>
+      <p class="hero-description">
+        An approachable, performant and versatile framework for building web user interfaces.
+      </p>
+      <div class="hero-actions">
+        <a href="/guide/introduction/" class="btn btn-primary">
+          Get Started
+        </a>
+        <a href="/tutorial/" class="btn btn-secondary">
+          Take the Tutorial
+        </a>
+      </div>
+    </div>
+    <div class="hero-code">
+      <Code code={`<script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
+</script>
+
+<template>
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
+</template>`} lang="vue" />
+    </div>
+  </div>
+</section>

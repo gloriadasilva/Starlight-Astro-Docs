@@ -1,0 +1,76 @@
+---
+// You can fetch real data here or use static data
+const stats = [
+  { label: 'GitHub Stars', value: '50k+', icon: '⭐' },
+  { label: 'npm Downloads', value: '1M+', icon: '📦' },
+  { label: 'Discord Members', value: '95k+', icon: '💬' },
+  { label: 'Contributors', value: '400+', icon: '👥' },
+];
+---
+
+<section class="community-stats">
+  <div class="container">
+    <h2 class="explore">Trusted by Developers Worldwide</h2>
+    <div class="stats-grid">
+      {stats.map((stat) => (
+        <div class="stat-card">
+          <div class="stat-icon">{stat.icon}</div>
+          <div class="stat-value">{stat.value}</div>
+          <div class="stat-label">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.community-stats {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.community-stats h2 {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #42b883;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+</style>

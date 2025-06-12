@@ -1,0 +1,57 @@
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+---
+
+
+<section class="vue-features">
+  <div class="container">
+    <h2 class="explore">Why Choose Vue?</h2>
+    <CardGrid>      
+      <Card title="📚 Approachable" icon="document">
+        <p>HTML-based template syntax</p>
+        <p>CSS scoping and CSS modules</p>
+        <p>Progressive adoption strategy</p>
+      </Card>
+            
+      <Card title="🏗️ Composition API" icon="puzzle">
+        <p>Better logic reuse</p>
+        <p>More flexible code organization</p>
+        <p>Better TypeScript support</p>
+      </Card>
+      
+      <Card title="⚡ Single File Components" icon="seti:html">
+        <p>Template, script, and style in one file</p>
+        <p>Scoped CSS support</p>
+        <p>Hot reload development</p>
+      </Card>
+      
+      <Card title="🛠️ Developer Experience" icon="laptop">
+        <p>Vue DevTools</p>
+        <p>Hot Module Replacement</p>
+        <p>Time-travel debugging</p>
+      </Card>
+    </CardGrid>
+  </div>
+</section>
+
+<style>
+.vue-features {
+  margin: 4rem 0;
+}
+
+.vue-features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+ /* background: linear-gradient(135deg, #42b883 0%, #35495e 100%);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+</style>

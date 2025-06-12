@@ -30,6 +30,17 @@
 	--sl-color-gray-7: #f4f7f3;
 	--sl-color-black: #ffffff;
 }
+.landing-page {
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Override Starlight's main content styling for landing page */
+.landing-page .sl-container {
+  max-width: none;
+  padding: 0;
+}
+
 a{
     text-decoration: none;
 }
@@ -60,7 +71,14 @@ a{
     width: 9em;
     height: 3em;
 }
-
+.explore{
+    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
 /* Custom Directives */
 
 .importanttext{
@@ -68,47 +86,53 @@ a{
     color: black;
 }
 
-/* CARDS */
-
-.astro-v5tidmuc:nth-of-type(2){
-  background-color: rgba(1, 135, 0, 0.8);
-  backdrop-filter: blur(1px);           /* glass blur effect */
-  border: 1px solid rgba(0, 135, 0, 0.6); /* light green border */
-  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.7);
-
-}
-.astro-v5tidmuc:nth-of-type(3){
-  background-color: rgba(1, 135, 0, 0.8);
-  backdrop-filter: blur(3px);           /* glass blur effect */
-  border: 1px solid rgba(0, 135, 0, 0.6); /* light green border */
-  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.7);
-
+.sl-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e1e8ed;
+  background-color: red;
 }
 
-.card-grid:where(.astro-zntqmydn) > .astro-v5tidmuc:nth-of-type(1) {
-  /* backdrop-filter: blur(0.2px);            */
-  border: 1px solid rgba(0, 135, 0, 0.4); /* light green border */
-  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.4);
+.sl-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(66, 184, 131, 0.15);
+  border-color: var(--vue-green);
 }
 
-
-.astro-v5tidmuc:nth-of-type(4){
-  /* backdrop-filter: blur(0.2px);          */
-  border: 1px solid rgba(0, 135, 0, 0.4); /* light green border */
-  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.4);
+/* Custom Button Styles */
+.sl-link-button[data-variant='primary'] {
+  background: linear-gradient(135deg, #42b883 0%, #369870 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+/* .astro-xwgiixxa{
+  background: linear-gradient(135deg, #42b883 0%, #369870 100%);
+  border: none;
+  transition: all 0.3s ease;
+} */
+.sl-link-astro[data-variant='primary']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(66, 184, 131, 0.3);
 }
 
-
-
-.sl-link-button:where(.astro-xwgiixxa):nth-of-type(1){
-  background-color: rgba(1, 135, 0, 0.8);
-  color: white;
+/* Section Spacing */
+.content-section {
+  margin: 6rem 0;
 }
-.sl-link-button:where(.astro-xwgiixxa):nth-of-type(2){
-  background-color: rgba(1, 135, 0, 0.8);
-  color: white;
-  width: 30%;
-  text-align: center;
-  padding: 1.2rem;
+
+/* Animation for scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease forwards;
+}
+ /* CARDS COMPONENTS */
 
